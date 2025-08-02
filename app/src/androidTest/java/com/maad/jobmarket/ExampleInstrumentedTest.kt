@@ -1,4 +1,4 @@
-package com.mehedi.jobmarket
+package com.maad.jobmarket
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

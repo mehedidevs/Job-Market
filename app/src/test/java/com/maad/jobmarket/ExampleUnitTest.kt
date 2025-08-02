@@ -1,4 +1,4 @@
-package com.mehedi.jobmarket
+package com.maad.jobmarket
 
 import org.junit.Test
 
