@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
+    kotlin("kapt")
+    alias(libs.plugins.hiltAndroid)
 }
 
 android {
@@ -35,6 +37,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -58,4 +63,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // dagger hilt
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.compiler)
 }
