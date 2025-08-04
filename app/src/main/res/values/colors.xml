@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="primaryColor">#FF000000</color>
+    <color name="secondaryColor">#1D80E2</color>
+
+    <color name="desTextColor">#4A4A4A</color>
+
+
 </resources>

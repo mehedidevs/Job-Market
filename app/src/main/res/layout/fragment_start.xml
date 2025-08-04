@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.startNav.StartFragment">
+
+    <ImageView
+        android:id="@+id/iv_startHeaderImage"
+        android:layout_width="318dp"
+        android:layout_height="238dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/start_page_header_title"
+        android:textColor="@color/primaryColor"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/start_page_description"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="@color/desTextColor"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="@dimen/button_marginHorizontal_max"
+        android:text="@string/login"
+        android:textSize="@dimen/button_textSize"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/secondaryColor"
+        app:cornerRadius="@dimen/button_radius"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signUp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="@dimen/button_layout_marginTop"
+        android:layout_marginHorizontal="@dimen/button_marginHorizontal_max"
+        android:text="@string/sign_up"
+        android:textSize="@dimen/button_textSize"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/secondaryColor"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/secondaryColor"
+        app:cornerRadius="@dimen/button_radius"
+        android:backgroundTint="@color/white"/>
+
+</LinearLayout>

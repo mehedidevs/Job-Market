@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".presentation.startNav.login.LoginFragment">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_arrow_back_24"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:text="@string/welcome_back"
+        android:textSize="@dimen/text_title_size_lage"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/primaryColor"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="28dp"
+        android:text="@string/login_page_des"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="@color/desTextColor"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryColor"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_layout_marginTop"
+        android:layout_marginHorizontal="@dimen/edit_text_layout_marginHorizontal_medium"
+        app:hintEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:endIconMode="clear_text"
+        app:boxStrokeColor="@color/secondaryColor"
+        app:hintTextColor="@color/secondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textWebEditText"
+            android:hint="@string/email_address"
+            android:textColorHint="@color/desTextColor"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_passwordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_layout_marginTop"
+        android:layout_marginHorizontal="@dimen/edit_text_layout_marginHorizontal_medium"
+        app:hintEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/secondaryColor"
+        app:boxStrokeColor="@color/secondaryColor"
+        app:hintTextColor="@color/secondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:textColorHint="@color/desTextColor"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_navForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="32dp"
+        android:text="@string/forgot_password_qs"
+        android:textColor="@color/secondaryColor"
+        android:textSize="16sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="@dimen/button_marginHorizontal_medium"
+        android:text="@string/login"
+        android:textSize="@dimen/button_textSize"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/secondaryColor"
+        app:cornerRadius="@dimen/button_radius"/>
+
+    <LinearLayout
+        android:id="@+id/ll_navSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/didn_t_have_an_account"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/secondaryColor"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <!--<com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signInWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="@dimen/button_marginHorizontal_medium"
+        android:text="@string/login_with_google"
+        android:textSize="@dimen/button_textSize"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/secondaryColor"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/button_radius"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/secondaryColor"
+        android:drawableStart="@drawable/ic_arrow_back_24"/>-->
+
+</LinearLayout>
