@@ -7,6 +7,9 @@ import com.maad.jobmarket.domain.repository.AuthRepository
 import jakarta.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
 class SignUpUseCase @Inject constructor(
     private val authRepository: AuthRepository
@@ -14,14 +17,23 @@ class SignUpUseCase @Inject constructor(
     operator fun invoke(userAuthModel: UserAuthModel): Flow<Resource<AuthResult>> = flow {
         try {
             emit(Resource.Loading())
-            val result = authRepository.signUp(userAuthModel)
-            if (result.isSuccessful) {
-                emit(Resource.Success(result.result!!))
-            } else {
-                emit(Resource.Error(result.exception?.localizedMessage ?: "An unexpected error occurred"))
-            }
+
+            val result = signUpWithFirebase(userAuthModel)
+            emit(Resource.Success(result))
         } catch (e: Exception) {
             emit(Resource.Error(e.localizedMessage ?: "An unexpected error occurred"))
+        }
+    }
+
+    private suspend fun signUpWithFirebase(userAuthModel: UserAuthModel): AuthResult {
+        return suspendCancellableCoroutine { continuation ->
+            authRepository.signUp(userAuthModel)
+                .addOnSuccessListener { authResult ->
+                    continuation.resume(authResult)
+                }
+                .addOnFailureListener { exception ->
+                    continuation.resumeWithException(exception)
+                }
         }
     }
 }

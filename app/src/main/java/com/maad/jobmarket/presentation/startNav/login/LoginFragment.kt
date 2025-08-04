@@ -67,11 +67,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                     loading.dismiss()
                     Toast.makeText(
                         requireContext(),
-                        "${loginState.data} login success",
+                        "login success",
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    /*startActivity(Intent(requireContext(), DashboardActivity::class.java))
+                    /*startActivity(Intent(requireContext(), MainActivity::class.java))
                     requireActivity().finish()*/
                 }
             }
