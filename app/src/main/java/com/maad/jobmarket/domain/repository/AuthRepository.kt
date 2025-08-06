@@ -6,11 +6,11 @@ import com.google.firebase.auth.FirebaseUser
 import com.maad.jobmarket.domain.model.UserAuthModel
 
 interface AuthRepository {
-    suspend fun signUp(userAuthModel: UserAuthModel): Task<AuthResult>
+    fun signUp(userAuthModel: UserAuthModel): Task<AuthResult>
 
-    suspend fun signIn(userAuthModel: UserAuthModel): Task<AuthResult>
+    fun signIn(userAuthModel: UserAuthModel): Task<AuthResult>
 
-    suspend fun sendPasswordResetEmail(email: String): Task<Void>
+    fun sendPasswordResetEmail(email: String): Task<Void>
 
     fun getCurrentUser(): FirebaseUser?
 }

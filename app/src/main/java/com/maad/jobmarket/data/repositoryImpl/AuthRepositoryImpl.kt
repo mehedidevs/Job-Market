@@ -12,15 +12,15 @@ class AuthRepositoryImpl @Inject constructor(
     private val firebaseService: FirebaseService
 ) : AuthRepository {
 
-    override suspend fun signUp(userAuthModel: UserAuthModel): Task<AuthResult> {
+    override fun signUp(userAuthModel: UserAuthModel): Task<AuthResult> {
         return firebaseService.signUp(userAuthModel)
     }
 
-    override suspend fun signIn(userAuthModel: UserAuthModel): Task<AuthResult> {
+    override fun signIn(userAuthModel: UserAuthModel): Task<AuthResult> {
         return firebaseService.signIn(userAuthModel)
     }
 
-    override suspend fun sendPasswordResetEmail(email: String): Task<Void> {
+    override fun sendPasswordResetEmail(email: String): Task<Void> {
         return firebaseService.sendPasswordResetEmail(email)
     }
 
