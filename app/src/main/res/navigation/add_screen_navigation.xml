@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_screen_navigation"
+    app:startDestination="@id/userDetailFragment">
+
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.maad.jobmarket.presentation.adddetailscreen.userdetail.UserDetailFragment"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail" >
+        <action
+            android:id="@+id/action_userDetailFragment_to_userAddressFragment"
+            app:destination="@id/userAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAddressFragment"
+        android:name="com.maad.jobmarket.presentation.adddetailscreen.addressdetail.UserAddressFragment"
+        android:label="fragment_user_address"
+        tools:layout="@layout/fragment_user_address" >
+        <action
+            android:id="@+id/action_userAddressFragment_to_userAcademicFragment"
+            app:destination="@id/userAcademicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAcademicFragment"
+        android:name="com.maad.jobmarket.presentation.adddetailscreen.academicdetail.UserAcademicFragment"
+        android:label="fragment_user_academic"
+        tools:layout="@layout/fragment_user_academic" >
+        <action
+            android:id="@+id/action_userAcademicFragment_to_userResumeFragment"
+            app:destination="@id/userResumeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userResumeFragment"
+        android:name="com.maad.jobmarket.presentation.adddetailscreen.resumedetail.UserResumeFragment"
+        android:label="fragment_user_resume"
+        tools:layout="@layout/fragment_user_resume" />
+</navigation>
