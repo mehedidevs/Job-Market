@@ -39,5 +39,8 @@
 
 
     <dimen name="chip_height">58dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="medium_padding">16dp</dimen>
 
 </resources>

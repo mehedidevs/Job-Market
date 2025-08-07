@@ -2,4 +2,18 @@
     <string name="app_name">Job Market</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password">forgot_password</string>
+    <string name="email_address">email_address</string>
+    <string name="send_otp">send_otp</string>
+    <string name="welcome_back">welcome_back</string>
+    <string name="login_page_des">login_page</string>
+    <string name="login">login</string>
+    <string name="password">password</string>
+    <string name="forgot_password_qs">forgot_password</string>
+    <string name="didn_t_have_an_account">didn_t_have_an_account</string>
+    <string name="sign_up">sign_up</string>
+    <string name="create_new_account">create_new_account</string>
+    <string name="already_have_an_account">already_have_an_account</string>
+    <string name="start_page_header_title">start_page_header_title</string>
+    <string name="start_page_description">start_page_description</string>
 </resources>

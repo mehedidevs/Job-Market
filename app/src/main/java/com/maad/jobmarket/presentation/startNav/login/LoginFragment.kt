@@ -1,10 +1,12 @@
 package com.maad.jobmarket.presentation.startNav.login
 
+import android.content.Intent
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.maad.jobmarket.R
+import com.maad.jobmarket.UserActivity
 import com.maad.jobmarket.core.utils.BaseFragment
 import com.maad.jobmarket.databinding.FragmentLoginBinding
 import com.maad.jobmarket.domain.model.UserAuthModel
@@ -71,8 +73,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    /*startActivity(Intent(requireContext(), MainActivity::class.java))
-                    requireActivity().finish()*/
+                    startActivity(Intent(requireContext(), UserActivity::class.java))
+                    requireActivity().finish()
                 }
             }
         }
