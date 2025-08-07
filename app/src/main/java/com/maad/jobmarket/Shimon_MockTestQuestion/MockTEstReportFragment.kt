@@ -16,6 +16,7 @@ class MockTEstReportFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding = FragmentMockTEstReportBinding.inflate(layoutInflater,container,false)
 
         val skip = requireArguments().getString("skip", "0")!!.toInt()
