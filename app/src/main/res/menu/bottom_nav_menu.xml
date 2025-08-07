@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ahasan_address"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/alertFragment"
+        android:icon="@drawable/ahasan_alert"
+        android:title="Alert" />
+
+    <item
+        android:id="@+id/mockTestFragment"
+        android:icon="@drawable/ahasan_test"
+        android:title="Mock Test" />
+
+    <item
+        android:id="@+id/jobsFragment"
+        android:icon="@drawable/ahasan_job_list"
+        android:title="Jobs" />
+</menu>

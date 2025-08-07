@@ -27,7 +27,10 @@ class UserFragment : BaseFragment<FragmentUserBinding>(FragmentUserBinding::infl
         binding.cvContactTpo.setOnClickListener {
             findNavController().navigate(R.id.action_userFragment_to_userTpoContact)
         }
-        binding.ivPopOut.setOnClickListener { }
+        binding.ivPopOut.setOnClickListener {
+            findNavController().navigateUp()
+
+        }
         binding.cvLogout.setOnClickListener { }
 
 
@@ -53,6 +56,9 @@ class UserFragment : BaseFragment<FragmentUserBinding>(FragmentUserBinding::infl
 
                     binding.cvUpdateResume.setOnClickListener {
                         Toast.makeText(requireContext(), "Resume Clicked: ${student.academic?.resumeUrl}", Toast.LENGTH_SHORT).show()
+                    }
+                    binding.cvContactTpo.setOnClickListener {
+                        findNavController().navigate(R.id.action_userFragment_to_userTpoContact)
                     }
                 }
 
