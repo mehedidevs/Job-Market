@@ -22,7 +22,6 @@ import com.maad.jobmarket.ahasan.data.model.Job
 import com.maad.jobmarket.ahasan.data.model.Student
 import com.maad.jobmarket.ahasan.data.model.Tpo
 import com.maad.jobmarket.ahasan.utils.Constants.Companion.COLLECTION_PATH_STUDENT
-import com.maad.jobmarket.ahasan.utils.Constants.Companion.COLLECTION_PATH_TPO
 import com.maad.jobmarket.ahasan.utils.Constants.Companion.PROFILE_IMAGE_PATH
 import com.maad.jobmarket.ahasan.utils.Constants.Companion.RESUME_PATH
 import com.maad.jobmarket.core.utils.Resource
@@ -41,13 +40,7 @@ class UserEditViewModel : ViewModel() {
 
     private var imageUri: Uri? = null
 
-    fun setImageUri(imageUri: Uri) {
-        this.imageUri = imageUri
-    }
 
-    fun getImageUri(): Uri? {
-        return this.imageUri
-    }
 
     private val _student: MutableLiveData<Resource<Student>> = MutableLiveData()
     val student: LiveData<Resource<Student>> = _student

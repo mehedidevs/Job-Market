@@ -1,10 +1,8 @@
 package com.maad.jobmarket.ahasan.ui.screens
 
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.firestore.Query.Direction.DESCENDING
 import com.maad.jobmarket.R
 import com.maad.jobmarket.ahasan.data.model.Job
 import com.maad.jobmarket.ahasan.ui.adapter.JobAdapter
@@ -15,7 +13,6 @@ import com.maad.jobmarket.databinding.FragmentHomeBinding
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
-    private lateinit var jobs: List<Job>
     private lateinit var jobAdapter: JobAdapter
     private val userEditViewModel by viewModels<UserEditViewModel>()
 
