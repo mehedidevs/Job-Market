@@ -60,7 +60,10 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+ 
     implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation(libs.androidx.fragment)
+ 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -68,4 +71,12 @@ dependencies {
     // dagger hilt
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
+
+    //circleImageView
+    implementation(libs.circleimageview)
+    //powerSpinner
+    implementation(libs.powerspinner)
+
+
+
 }
