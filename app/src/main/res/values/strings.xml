@@ -2,4 +2,25 @@
     <string name="app_name">Job Market</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_nkrish_saloni">Hello\nKrish Saloni</string>
+    <string name="know_the_company_nand_the_job">Know the Company\nand the Job</string>
+    <string name="spend_some_time_learning_about_the_company_and_the_job_you_re_applying_for">Spend some time learning\nabout the company and the job\nyou’re applying for.</string>
+    <string name="status">Status</string>
+    <string name="_2">2</string>
+    <string name="companies">Companies</string>
+    <string name="_0">0</string>
+    <string name="jobs_applied">Jobs Applied</string>
+    <string name="recent_job_list">Recent Job List</string>
+    <string name="etp_sap_consultant">ETP SAP Consultant</string>
+    <string name="deloitte_hyderabad">Deloitte, Hyderabad</string>
+    <string name="_4_lpa">₹4 LPA</string>
+    <string name="consultant">Consultant</string>
+    <string name="full_time">Full Time</string>
+    <string name="apply">Apply</string>
+    <string name="notification">notification</string>
+    <string name="congratulations">congratulations</string>
+    <string name="you_have_been_selected_for_this_job_at_wipro_please_check_your_email_for_further_instructions">you_have_been_selected_for_this_job_at_wipro_please_check_your_email_for_further_instructions</string>
+    <string name="_19_seconds_ago">_19_seconds_ago</string>
+    <string name="spend_some_time_learning_nabout_the_company_and_the_job_nyou_re_applying_for">spend_some_time_learning_nabout_the_company_and_the_job_nyou_re_applying_for</string>
+
 </resources>

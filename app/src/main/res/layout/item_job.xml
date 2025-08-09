@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/tvJobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/etp_sap_consultant"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000" />
+
+
+        <TextView
+            android:id="@+id/tvCompanyLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deloitte_hyderabad"
+            android:textSize="12sp"
+            android:textColor="#777" />
+
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4_lpa"
+            android:textColor="#F26B4A"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tvJobType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/consultant"
+                android:background="#E0E0E0"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvEmploymentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_time"
+                android:background="#E0E0E0"
+                android:padding="6dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply"
+                android:backgroundTint="#F26B4A"
+                android:textColor="#FFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
