@@ -1,4 +1,4 @@
-package com.maad.jobmarket.presentation.adddetailscreen.academicdetail
+package com.maad.jobmarket.adddetailscreen.addpresentation.academicdetail
 
 import android.os.Bundle
 import android.view.LayoutInflater

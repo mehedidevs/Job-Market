@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "231709915375",
-    "project_id": "job-market-d2792",
-    "storage_bucket": "job-market-d2792.firebasestorage.app"
+    "project_number": "763697844299",
+    "project_id": "job-market-6ca92",
+    "storage_bucket": "job-market-6ca92.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:231709915375:android:6519c54faa2f2bdd52c31a",
+        "mobilesdk_app_id": "1:763697844299:android:0a3c04a0c0aaa9fcd0bdce",
         "android_client_info": {
           "package_name": "com.maad.jobmarket"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBFjYjunLRxlpR-7Av4tBt7fX5Vj9z2hWI"
+          "current_key": "AIzaSyASoPf3yhBzWVMpRXmr378F66ZqT3Px7G4"
         }
       ],
       "services": {
