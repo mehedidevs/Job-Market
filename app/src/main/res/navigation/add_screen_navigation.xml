@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/userDetailFragment"
-        android:name="com.maad.jobmarket.presentation.adddetailscreen.userdetail.UserDetailFragment"
+        android:name="com.maad.jobmarket.adddetailscreen.addpresentation.userdetail.UserDetailFragment"
         android:label="fragment_user_detail"
         tools:layout="@layout/fragment_user_detail" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/userAddressFragment"
-        android:name="com.maad.jobmarket.presentation.adddetailscreen.addressdetail.UserAddressFragment"
+        android:name="com.maad.jobmarket.adddetailscreen.addpresentation.addressdetail.UserAddressFragment"
         android:label="fragment_user_address"
         tools:layout="@layout/fragment_user_address" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/userAcademicFragment"
-        android:name="com.maad.jobmarket.presentation.adddetailscreen.academicdetail.UserAcademicFragment"
+        android:name="com.maad.jobmarket.adddetailscreen.addpresentation.academicdetail.UserAcademicFragment"
         android:label="fragment_user_academic"
         tools:layout="@layout/fragment_user_academic" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/userResumeFragment"
-        android:name="com.maad.jobmarket.presentation.adddetailscreen.resumedetail.UserResumeFragment"
+        android:name="com.maad.jobmarket.adddetailscreen.addpresentation.resumedetail.UserResumeFragment"
         android:label="fragment_user_resume"
         tools:layout="@layout/fragment_user_resume" />
 </navigation>
