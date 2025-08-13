@@ -102,6 +102,79 @@ class UserEditViewModel : ViewModel() {
     }
 
 
+    fun fetchjobs() {
+        viewModelScope.launch {
+            val dummyJobs = listOf(
+                Job(
+                    authorUid = "user1",
+                    imageUrl = "https://i.imgur.com/ZcLLrkY.png", // Replace with actual logo URLs if needed
+                    role = "UI/UX Designer",
+                    name = "Google Inc.",
+                    city = "Mountain View, CA",
+                    salary = "$12k/Mo",
+                    workType = "Remote",
+                    designation = "Senior",
+                    description = "Design user-friendly interfaces for mobile and web apps.",
+                    responsibility = "Wireframing, prototyping, testing.",
+                    skillSet = listOf("Figma", "Adobe XD", "Sketch")
+                ),
+                Job(
+                    authorUid = "user2",
+                    imageUrl = "https://i.imgur.com/BoN9kdC.png",
+                    role = "Android Developer",
+                    name = "Meta",
+                    city = "Menlo Park, CA",
+                    salary = "$15k/Mo",
+                    workType = "On-site",
+                    designation = "Mid-Level",
+                    description = "Build and maintain Android apps with cutting-edge features.",
+                    responsibility = "Developing UI, integrating APIs, fixing bugs.",
+                    skillSet = listOf("Kotlin", "MVVM", "Firebase", "Jetpack Compose")
+                ),
+                Job(
+                    authorUid = "user3",
+                    imageUrl = "https://i.imgur.com/0y8Ftya.png",
+                    role = "Data Scientist",
+                    name = "Netflix",
+                    city = "Los Gatos, CA",
+                    salary = "$18k/Mo",
+                    workType = "Hybrid",
+                    designation = "Lead",
+                    description = "Analyze user behavior to improve recommendation systems.",
+                    responsibility = "Data modeling, algorithm design, A/B testing.",
+                    skillSet = listOf("Python", "TensorFlow", "SQL", "Pandas")
+                ),
+                Job(
+                    authorUid = "user4",
+                    imageUrl = "https://i.imgur.com/yhR7U1D.png",
+                    role = "Frontend Engineer",
+                    name = "Airbnb",
+                    city = "San Francisco, CA",
+                    salary = "$14k/Mo",
+                    workType = "Remote",
+                    designation = "Junior",
+                    description = "Develop responsive and high-performing UI.",
+                    responsibility = "React development, UI testing, collaboration with backend.",
+                    skillSet = listOf("React", "TypeScript", "Redux", "Next.js")
+                ),
+                Job(
+                    authorUid = "user5",
+                    imageUrl = "https://i.imgur.com/FpX2MAv.png",
+                    role = "Backend Developer",
+                    name = "Spotify",
+                    city = "Stockholm, Sweden",
+                    salary = "$13k/Mo",
+                    workType = "On-site",
+                    designation = "Mid-Level",
+                    description = "Create scalable backend APIs for streaming service.",
+                    responsibility = "API development, database management, server optimization.",
+                    skillSet = listOf("Node.js", "MongoDB", "Docker", "Kubernetes")
+                )
+            )
+            _jobs.postValue(dummyJobs)
+        }
+    }
+
 
 
     fun updateStudent(student: Student) {
