@@ -6,7 +6,6 @@ import com.google.firebase.firestore.firestore
 import com.google.firebase.sessions.dagger.Module
 import com.google.firebase.sessions.dagger.Provides
 import com.maad.jobmarket.ahasan.data.remote.database.FirebaseStudentService
-import com.maad.jobmarket.ahasan.data.repository.StudentRepositoryImpl
 import com.maad.jobmarket.ahasan.domain.repository.StudentRepository
 import com.maad.jobmarket.ahasan.domain.usecase.GetStudentUseCase
 

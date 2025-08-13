@@ -6,14 +6,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.maad.jobmarket.R
-import com.maad.jobmarket.ahasan.domain.model.Student
 import com.maad.jobmarket.ahasan.ui.viewmodels.StudentViewModel
-import com.maad.jobmarket.ahasan.ui.viewmodels.UserEditViewModel
 import com.maad.jobmarket.core.utils.BaseFragment
-import com.maad.jobmarket.core.utils.Resource
 import com.maad.jobmarket.databinding.FragmentUserBinding
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 import kotlin.getValue
 
 class UserFragment : BaseFragment<FragmentUserBinding>(FragmentUserBinding::inflate) {
