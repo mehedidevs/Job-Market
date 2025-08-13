@@ -31,16 +31,16 @@ class HomeFragment : Fragment() {
         adapter = JobAdapter(emptyList())
         binding.rvRecentJobs.layoutManager = LinearLayoutManager(requireContext())
         binding.rvRecentJobs.adapter = adapter
-
         viewModel.loadJobs()
 
         observeViewModel()
 
-        return binding.root
 
+        return binding.root
     }
 
     private fun observeViewModel() {
+
         viewModel.jobs.observe(viewLifecycleOwner) { jobs ->
             adapter.updateJobs(jobs)
         }

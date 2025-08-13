@@ -20,9 +20,6 @@
     <string name="apply">Apply</string>
     <string name="notification">notification</string>
     <string name="congratulations">congratulations</string>
-    <string name="you_have_been_selected_for_this_job_at_wipro_please_check_your_email_for_further_instructions">you_have_been_selected_for_this_job_at_wipro_please_check_your_email_for_further_instructions</string>
-    <string name="_19_seconds_ago">_19_seconds_ago</string>
-    <string name="spend_some_time_learning_nabout_the_company_and_the_job_nyou_re_applying_for">spend_some_time_learning_nabout_the_company_and_the_job_nyou_re_applying_for</string>
 
 
 
@@ -151,5 +148,8 @@
 
     <string name="mock_test_instructions">1. Test will be auto submitted when the time is up.\n\n2. The comprises of multiple choice questions (MCQ) with one correct answer.\n\n3. The clock in the top right corner will display the remaining time available for you to complete the test.</string>
     <string name="mock_test_navigation">1. Select the option and the answer will be saved once you click on the submit button.\n\n2. Once you click on the submit button, you cannot change the answer and the solution will be displayed on the bottom.\n\n3. To go onto the next question, slide towards left.</string>
+    <string name="_19_seconds_ago">19 seconds ago</string>
+    <string name="you_have_been_selected_for_this_job_at_wipro_please_check_your_email_for_further_instructions">you have been selected for this job at wipro please check your email for further instructions</string>
+    <string name="spend_some_time_learning_nabout_the_company_and_the_job_you_are_applying_for">spend some time learning nabout the company and the job you are applying for</string>
 
 </resources>
