@@ -71,8 +71,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                         Toast.LENGTH_SHORT
                     ).show()
 
-                    /*startActivity(Intent(requireContext(), MainActivity::class.java))
-                    requireActivity().finish()*/
+//                    startActivity(Intent(requireContext(), MainActivity::class.java))
+//                    requireActivity().finish()
                 }
             }
         }

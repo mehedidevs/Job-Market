@@ -5,6 +5,8 @@ plugins {
     alias(libs.plugins.google.firebase.crashlytics)
     kotlin("kapt")
     alias(libs.plugins.hiltAndroid)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.androidx.navigation.safeargs)
 }
 
 android {

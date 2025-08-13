@@ -9,8 +9,7 @@ import com.maad.jobmarket.domain.repository.AuthRepository
 import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor(
-    private val firebaseService: FirebaseService
-) : AuthRepository {
+    private val firebaseService: FirebaseService) : AuthRepository {
 
     override fun signUp(userAuthModel: UserAuthModel): Task<AuthResult> {
         return firebaseService.signUp(userAuthModel)

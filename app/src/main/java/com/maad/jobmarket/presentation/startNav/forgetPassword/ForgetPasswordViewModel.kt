@@ -12,8 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ForgetPasswordViewModel @Inject constructor(
-    private val resetPasswordUseCase: ResetPasswordUseCase
-): ViewModel() {
+    private val resetPasswordUseCase: ResetPasswordUseCase): ViewModel() {
     private val _resetPasswordState = MutableStateFlow(RestPasswordDataState())
     val resetPasswordState: StateFlow<RestPasswordDataState> get() = _resetPasswordState
 

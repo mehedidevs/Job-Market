@@ -12,6 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
+
 class FirebaseModule {
 
     @Provides
@@ -31,4 +32,5 @@ class FirebaseModule {
     fun provideAuthRepository(firebaseService: FirebaseService): AuthRepository {
         return AuthRepositoryImpl(firebaseService)
     }
+
 }
