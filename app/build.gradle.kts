@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.maad.jobmarket"
-    compileSdk = 36
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.maad.jobmarket"
@@ -60,7 +60,7 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.androidx.fragment)
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -68,12 +68,4 @@ dependencies {
     // dagger hilt
     implementation(libs.dagger.hilt.android)
     kapt(libs.dagger.hilt.compiler)
-
-    //circleImageView
-    implementation(libs.circleimageview)
-    //powerSpinner
-    implementation(libs.powerspinner)
-
-
-
 }

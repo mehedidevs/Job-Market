@@ -3,6 +3,26 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="hello_nkrish_saloni">Hello\nKrish Saloni</string>
+    <string name="know_the_company_nand_the_job">Know the Company\nand the Job</string>
+    <string name="spend_some_time_learning_about_the_company_and_the_job_you_re_applying_for">Spend some time learning\nabout the company and the job\nyou’re applying for.</string>
+    <string name="status">Status</string>
+    <string name="_2">2</string>
+    <string name="companies">Companies</string>
+    <string name="_0">0</string>
+    <string name="jobs_applied">Jobs Applied</string>
+    <string name="recent_job_list">Recent Job List</string>
+    <string name="etp_sap_consultant">ETP SAP Consultant</string>
+    <string name="deloitte_hyderabad">Deloitte, Hyderabad</string>
+    <string name="_4_lpa">₹4 LPA</string>
+    <string name="consultant">Consultant</string>
+    <string name="full_time">Full Time</string>
+    <string name="apply">Apply</string>
+    <string name="notification">notification</string>
+    <string name="congratulations">congratulations</string>
+
+
+
     <string name="on_boarding_heading">Find Your \nDream Job \nHere!</string>
     <string name="on_boarding_sub_heading">Explore all the most exciting job roles based on your interest and study major.</string>
     <string name="login_fragment_heading">Welcome Back</string>
@@ -128,4 +148,8 @@
 
     <string name="mock_test_instructions">1. Test will be auto submitted when the time is up.\n\n2. The comprises of multiple choice questions (MCQ) with one correct answer.\n\n3. The clock in the top right corner will display the remaining time available for you to complete the test.</string>
     <string name="mock_test_navigation">1. Select the option and the answer will be saved once you click on the submit button.\n\n2. Once you click on the submit button, you cannot change the answer and the solution will be displayed on the bottom.\n\n3. To go onto the next question, slide towards left.</string>
+    <string name="_19_seconds_ago">19 seconds ago</string>
+    <string name="you_have_been_selected_for_this_job_at_wipro_please_check_your_email_for_further_instructions">you have been selected for this job at wipro please check your email for further instructions</string>
+    <string name="spend_some_time_learning_nabout_the_company_and_the_job_you_are_applying_for">spend some time learning nabout the company and the job you are applying for</string>
+
 </resources>
