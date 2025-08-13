@@ -1,4 +1,4 @@
-package com.maad.jobmarket.ahasan.data.model
+package com.maad.jobmarket.ahasan.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

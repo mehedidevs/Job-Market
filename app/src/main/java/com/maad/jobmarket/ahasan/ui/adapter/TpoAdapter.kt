@@ -3,7 +3,7 @@ package com.maad.jobmarket.ahasan.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.maad.jobmarket.ahasan.data.model.Tpo
+import com.maad.jobmarket.ahasan.domain.model.Tpo
 import com.maad.jobmarket.databinding.TpoCardLayoutBinding
 
 class TpoAdapter : RecyclerView.Adapter<TpoAdapter.TpoViewHolder>() {

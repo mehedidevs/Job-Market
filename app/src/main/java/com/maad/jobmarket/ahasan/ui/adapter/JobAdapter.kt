@@ -3,7 +3,7 @@ package com.maad.jobmarket.ahasan.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.maad.jobmarket.ahasan.data.model.Job
+import com.maad.jobmarket.ahasan.domain.model.Job
 import com.maad.jobmarket.databinding.JobItemCardBinding
 
 class JobAdapter( private val jobList: List<Job>, private val onItemClick: (Job) -> Unit ) : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
@@ -16,8 +16,6 @@ class JobAdapter( private val jobList: List<Job>, private val onItemClick: (Job)
             binding.chipDesignation.text = job.designation
             binding.chipWorkType.text = job.workType
 
-            // Load logo with Glide or similar
-            // Glide.with(binding.ivCompanyLogo.context).load(job.imageUrl).into(binding.ivCompanyLogo)
 
             binding.btnApply.setOnClickListener {
                 onItemClick(job)

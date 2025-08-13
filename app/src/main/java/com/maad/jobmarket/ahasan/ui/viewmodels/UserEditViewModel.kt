@@ -9,18 +9,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.maad.jobmarket.ahasan.data.model.Academic
-import com.maad.jobmarket.ahasan.data.model.Address
-import com.maad.jobmarket.ahasan.data.model.Details
-import com.maad.jobmarket.ahasan.data.model.Job
-import com.maad.jobmarket.ahasan.data.model.Student
-import com.maad.jobmarket.ahasan.data.model.Tpo
+import com.maad.jobmarket.ahasan.domain.model.Academic
+import com.maad.jobmarket.ahasan.domain.model.Address
+import com.maad.jobmarket.ahasan.domain.model.Details
+import com.maad.jobmarket.ahasan.domain.model.Job
+import com.maad.jobmarket.ahasan.domain.model.Student
+import com.maad.jobmarket.ahasan.domain.model.Tpo
 import com.maad.jobmarket.ahasan.utils.Constants.Companion.COLLECTION_PATH_STUDENT
 import com.maad.jobmarket.ahasan.utils.Constants.Companion.PROFILE_IMAGE_PATH
 import com.maad.jobmarket.ahasan.utils.Constants.Companion.RESUME_PATH
@@ -35,26 +33,16 @@ class UserEditViewModel : ViewModel() {
     private val studentId: String by lazy { mAuth.currentUser?.uid.toString() }
     private val mStorage: StorageReference by lazy { FirebaseStorage.getInstance().reference }
     private val mFirestore: FirebaseFirestore by lazy { FirebaseFirestore.getInstance() }
-    private val mRealtimeDb: DatabaseReference by lazy { FirebaseDatabase.getInstance().reference }
     private var tpoListener : ListenerRegistration? = null
 
-    private var imageUri: Uri? = null
 
 
-
-    private val _student: MutableLiveData<Resource<Student>> = MutableLiveData()
-    val student: LiveData<Resource<Student>> = _student
-    init {
-        loadDummyStudent()
-    }
 
 
     val _jobs = MutableLiveData<List<Job>>()
     val jobs: LiveData<List<Job>> = _jobs
 
 
-
-// In ViewModel init or function
     private val _tpoList: MutableLiveData<List<Tpo>> = MutableLiveData(emptyList())
     val tpoList: LiveData<List<Tpo>> = _tpoList
 
@@ -67,37 +55,8 @@ class UserEditViewModel : ViewModel() {
     private val _deleteState: MutableLiveData<Resource<String>> = MutableLiveData()
     val deleteState: LiveData<Resource<String>> = _deleteState
 
-    fun fetchStudent() {
-        viewModelScope.launch(IO) {
-            try {
-                _student.postValue(Resource.Loading())
-                val studentRef = mFirestore.collection(COLLECTION_PATH_STUDENT).document(studentId).get().await()
-                val student = studentRef.toObject(Student::class.java)!!
-                _student.postValue(Resource.Success(student))
-            } catch (error: Exception) {
-                Log.d(TAG, "Error: ${error.message}")
-                _student.postValue(Resource.Error(error.message!!))
-            }
-        }
-    }
 
-    fun fetchResume() {
-        viewModelScope.launch(IO) {
-            try {
-                _resumeState.postValue(Resource.Loading())
-                val resumeRef = mStorage.child(RESUME_PATH).child(studentId)
-                val resumeUri = resumeRef.downloadUrl.await()
-                val metaData = resumeRef.metadata.await()
-                val fileName = metaData.getCustomMetadata("fileName") ?: ""
-                val fileMetaData = metaData.getCustomMetadata("fileMetaData") ?: ""
-                val resumeData = Triple(fileName, fileMetaData, resumeUri)
-                _resumeState.postValue(Resource.Success(resumeData))
-            } catch (error: Exception) {
-                val errorMessage = error.message!!
-                _resumeState.postValue(Resource.Error(errorMessage))
-            }
-        }
-    }
+
 
     fun fetchTpo() {
 
@@ -258,37 +217,6 @@ class UserEditViewModel : ViewModel() {
                 _updateState.postValue(Resource.Error(errorMessage))
             }
         }
-    }
-
-    private fun loadDummyStudent() {
-        val dummyStudent = Student(
-            uid = "user_001",
-            details = Details(
-                username = "ahasan_dev",
-                email = "ahasan@example.com",
-                imageUrl = "https://dummyimage.com/200x200", // optional
-                sapId = "1234567890",
-                mobile = "01700000000",
-                dob = "2000-01-01",
-                gender = "Male"
-            ),
-            address = Address(
-                address = "123, Test Street",
-                city = "Dhaka",
-                state = "Dhaka",
-                zipCode = "1000"
-            ),
-            academic = Academic(
-                sem1 = "3.5",
-                sem2 = "3.7",
-                sem3 = "3.9",
-                sem4 = "4.0",
-                avgScore = "3.78",
-                resumeUrl = "https://example.com/resume.pdf"
-            )
-        )
-
-        _student.value = Resource.Success(dummyStudent)
     }
 
 

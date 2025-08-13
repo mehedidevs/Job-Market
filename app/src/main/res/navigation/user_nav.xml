@@ -32,7 +32,7 @@
         tools:layout="@layout/fragment_user_edit">
         <argument
             android:name="student"
-            app:argType="com.maad.jobmarket.ahasan.data.model.Student" />
+            app:argType="com.maad.jobmarket.ahasan.domain.model.Student" />
     </fragment>
     <fragment
         android:id="@+id/userResumeEdit"

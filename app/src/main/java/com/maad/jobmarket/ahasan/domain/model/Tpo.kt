@@ -1,4 +1,4 @@
-package com.maad.jobmarket.ahasan.data.model
+package com.maad.jobmarket.ahasan.domain.model
 
 data class Tpo(
     var uid: String = "",

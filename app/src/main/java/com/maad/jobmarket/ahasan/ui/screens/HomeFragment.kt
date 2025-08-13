@@ -4,7 +4,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.maad.jobmarket.R
-import com.maad.jobmarket.ahasan.data.model.Job
+import com.maad.jobmarket.ahasan.domain.model.Job
 import com.maad.jobmarket.ahasan.ui.adapter.JobAdapter
 import com.maad.jobmarket.ahasan.ui.viewmodels.UserEditViewModel
 import com.maad.jobmarket.core.utils.BaseFragment
