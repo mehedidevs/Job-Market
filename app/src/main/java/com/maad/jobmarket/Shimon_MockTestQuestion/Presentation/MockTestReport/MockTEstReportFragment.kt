@@ -1,4 +1,4 @@
-package com.maad.jobmarket.Shimon_MockTestQuestion
+package com.maad.jobmarket.Shimon_MockTestQuestion.Presentation.MockTestReport
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

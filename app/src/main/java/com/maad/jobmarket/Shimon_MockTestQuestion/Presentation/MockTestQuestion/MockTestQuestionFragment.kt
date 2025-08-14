@@ -1,4 +1,4 @@
-package com.maad.jobmarket.Shimon_MockTestQuestion.MockTestQuestion
+package com.maad.jobmarket.Shimon_MockTestQuestion.Presentation.MockTestQuestion
 
 import android.os.Bundle
 import android.view.*
@@ -9,7 +9,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.maad.jobmarket.R
 import com.maad.jobmarket.databinding.FragmentMockTestQuestionBinding
-import com.maad.jobmarket.presentation.viewmodel.MockTestQuestionViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 class MockTestQuestionFragment : Fragment() {
@@ -32,16 +31,18 @@ class MockTestQuestionFragment : Fragment() {
         lifecycleScope.launchWhenStarted {
             viewModel.uiState.collectLatest { state ->
                 // Set question and options
-                binding.questionTV.text = state.currentQuestion?.question
-                binding.option1.text = state.currentQuestion?.option1
-                binding.option2.text = state.currentQuestion?.option2
-                binding.option3.text = state.currentQuestion?.option3
-                binding.option4.text = state.currentQuestion?.option4
+                binding.apply {
+                    questionTV.text = state.currentQuestion?.question
+                    option1.text = state.currentQuestion?.option1
+                    option2.text = state.currentQuestion?.option2
+                    option3.text = state.currentQuestion?.option3
+                    option4.text = state.currentQuestion?.option4
+                    // Update UI
+                    totalQuestionTV.text = "Question: ${state.currentIndex + 1}/${state.totalQuestions}"
+                    totalScoreTV.text = "Score: ${state.score}"
+                    timerText.text = "Time Left: ${state.timeLeftInSec}"
+                }
 
-                // Update UI
-                binding.totalQuestionTV.text = "Question: ${state.currentIndex + 1}/${state.totalQuestions}"
-                binding.totalScoreTV.text = "Score: ${state.score}"
-                binding.timerText.text = "Time Left: ${state.timeLeftInSec}"
 
                 // Highlight selected answer
                 updateCardSelection(state.selectedAnswer)
@@ -60,35 +61,34 @@ class MockTestQuestionFragment : Fragment() {
             }
         }
     }
-
     private fun setupClickListeners() {
-        binding.card1.setOnClickListener {
-            viewModel.selectAnswer(binding.option1.text.toString())
-        }
-        binding.card2.setOnClickListener {
-            viewModel.selectAnswer(binding.option2.text.toString())
-        }
-        binding.card3.setOnClickListener {
-            viewModel.selectAnswer(binding.option3.text.toString())
-        }
-        binding.card4.setOnClickListener {
-            viewModel.selectAnswer(binding.option4.text.toString())
+        listOf(
+            binding.card1 to binding.option1,
+            binding.card2 to binding.option2,
+            binding.card3 to binding.option3,
+            binding.card4 to binding.option4
+        ).forEach { (card, optionView) ->
+            card.setOnClickListener {
+                viewModel.selectAnswer(optionView.text.toString())
+            }
         }
 
-        binding.nextBtn.setOnClickListener {
-            viewModel.nextQuestion()
-        }
+        binding.nextBtn.setOnClickListener { viewModel.nextQuestion() }
     }
+
 
     private fun updateCardSelection(selected: String?) {
         val defaultColor = ContextCompat.getColor(requireContext(), android.R.color.white)
         val selectedColor = ContextCompat.getColor(requireContext(), R.color.secondaryColor)
 
         // Reset all cards to default
-        binding.card1.setCardBackgroundColor(defaultColor)
-        binding.card2.setCardBackgroundColor(defaultColor)
-        binding.card3.setCardBackgroundColor(defaultColor)
-        binding.card4.setCardBackgroundColor(defaultColor)
+        binding.apply {
+            card1.setCardBackgroundColor(defaultColor)
+            card2.setCardBackgroundColor(defaultColor)
+            card3.setCardBackgroundColor(defaultColor)
+            card4.setCardBackgroundColor(defaultColor)
+
+        }
 
         // Highlight selected card
         when (selected) {

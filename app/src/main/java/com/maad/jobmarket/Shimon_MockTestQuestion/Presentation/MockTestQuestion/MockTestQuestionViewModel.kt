@@ -1,13 +1,12 @@
-package com.maad.jobmarket.presentation.viewmodel
+package com.maad.jobmarket.Shimon_MockTestQuestion.Presentation.MockTestQuestion
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.maad.jobmarket.domain.model.MockQuestion
+import com.maad.jobmarket.Shimon_MockTestQuestion.Domain.Model.MockQuestion
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import java.util.concurrent.TimeUnit
 
 data class QuizUiState(
     val currentQuestion: MockQuestion? = null,
@@ -40,9 +39,7 @@ class MockTestQuestionViewModel : ViewModel() {
 
     private var timerRunning = true
 
-    init {
-        startTimer()
-    }
+    init { startTimer() }
 
     private fun startTimer() {
         viewModelScope.launch {
@@ -52,9 +49,7 @@ class MockTestQuestionViewModel : ViewModel() {
                     timeLeftInSec = _uiState.value.timeLeftInSec - 1
                 )
             }
-            if (_uiState.value.timeLeftInSec == 0) {
-                finishQuiz()
-            }
+            if (_uiState.value.timeLeftInSec == 0) finishQuiz()
         }
     }
 

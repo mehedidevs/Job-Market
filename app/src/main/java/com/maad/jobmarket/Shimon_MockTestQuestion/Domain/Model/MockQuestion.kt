@@ -1,4 +1,4 @@
-package com.maad.jobmarket.domain.model
+package com.maad.jobmarket.Shimon_MockTestQuestion.Domain.Model
 
 data class MockQuestion(
 

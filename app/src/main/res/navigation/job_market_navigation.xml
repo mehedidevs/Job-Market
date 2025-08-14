@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_add_detail" />
     <fragment
         android:id="@+id/mockTestQuestionFragment"
-        android:name="com.maad.jobmarket.Shimon_MockTestQuestion.MockTestQuestion.MockTestQuestionFragment"
+        android:name="com.maad.jobmarket.Shimon_MockTestQuestion.Presentation.MockTestQuestion.MockTestQuestionFragment"
         android:label="fragment_mock_test_question"
         tools:layout="@layout/fragment_mock_test_question" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/mockTEstReportFragment"
-        android:name="com.maad.jobmarket.Shimon_MockTestQuestion.MockTEstReportFragment"
+        android:name="com.maad.jobmarket.Shimon_MockTestQuestion.Presentation.MockTestReport.MockTEstReportFragment"
         android:label="fragment_mock_t_est_report"
         tools:layout="@layout/fragment_mock_t_est_report" />
 </navigation>
