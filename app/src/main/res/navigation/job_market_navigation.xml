@@ -2,4 +2,26 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/job_market_navigation" />
+    android:id="@+id/job_market_navigation"
+    app:startDestination="@id/mockTestQuestionFragment">
+
+    <fragment
+        android:id="@+id/addDetailFragment"
+        android:name="com.maad.jobmarket.AddDetailFragment"
+        android:label="fragment_add_detail"
+        tools:layout="@layout/fragment_add_detail" />
+    <fragment
+        android:id="@+id/mockTestQuestionFragment"
+        android:name="com.maad.jobmarket.Shimon_MockTestQuestion.Presentation.MockTestQuestion.MockTestQuestionFragment"
+        android:label="fragment_mock_test_question"
+        tools:layout="@layout/fragment_mock_test_question" >
+        <action
+            android:id="@+id/action_mockTestQuestionFragment_to_mockTEstReportFragment"
+            app:destination="@id/mockTEstReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mockTEstReportFragment"
+        android:name="com.maad.jobmarket.Shimon_MockTestQuestion.Presentation.MockTestReport.MockTEstReportFragment"
+        android:label="fragment_mock_t_est_report"
+        tools:layout="@layout/fragment_mock_t_est_report" />
+</navigation>
